@@ -1,6 +1,6 @@
 // Chawla, Kevin.
 // kxc3244
-// 2020-03-28
+// 2020-03-29
 
 import java.nio.file.Paths;
 import java.nio.file.Files;
@@ -13,24 +13,24 @@ public class hmwk_02 {
     // Replace the following line with your code to classify
     // the string in 'token' according to your three Regular
     // Expressions and print the appropriate message.
-    boolean PayJay = false;
-    boolean Rattle = false;
-    boolean Tork = false;
-    PayJay = token.matches("^(%|\\*)(%%|\\*\\*|%\\*|\\*%)*((J(J)*AY)|(p(p)*ay)|(J|p)*)$");
-    Rattle = token.matches("^(\\+([0-9A-F][0-9A-F])*(\\-|:))|(\\-([0-9A-F][0-9A-F])*(:|\\+))|(:([0-9A-F][0-9A-F])*(\\-|\\+))$");
-    Tork = token.matches("^(\\|[AEIOU]*\\*)|(\\|[aeiou]*=)|(\\|\\$)$");
+    boolean first = false;
+    boolean second = false;
+    boolean third = false;
+    first = token.matches("^(%|\\*)(%%|\\*\\*|%\\*|\\*%)*((J(J)*AY)|(p(p)*ay)|(J|p)*)$");
+    second = token.matches("^(\\+([0-9A-F][0-9A-F])*(\\-|:))|(\\-([0-9A-F][0-9A-F])*(:|\\+))|(:([0-9A-F][0-9A-F])*(\\-|\\+))$");
+    third = token.matches("^(\\|[AEIOU]*\\*)|(\\|[aeiou]*=)|(\\|\\$)$");
 
     // Rattle: ("^(\\+|-|:)$");
 
-    if(PayJay == true)
+    if(first == true)
     {
       System.out.println(">"+token+"< matches PayJay.");
     }
-    else if(Rattle == true)
+    else if(second == true)
     {
       System.out.println(">"+token+"< matches Rattle.");
     }
-    else if(Tork == true)
+    else if(third == true)
     {
       System.out.println(">"+token+"< matches Tork.");
     }
@@ -39,7 +39,7 @@ public class hmwk_02 {
       System.out.println(">"+token+"< does not match.");
     }
 
-    //System.out.println( ">" + token + "< is the proposed token." );
+   
   }
 
   //--------------------------------------------------------
